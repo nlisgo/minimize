@@ -280,6 +280,12 @@ describe('Minimize', function () {
       });
     });
 
+    it('drupalcores minimize', function (done) {
+      minimize.parse(html.drupalcores, function (error, result) {
+        done();
+      });
+    });
+
     it('should always quote attributes that end with / regardless of options', function (done) {
       var quote = new Minimize({ quotes: false });
       quote.parse('<a href="#/">test</a>', function (error, result) {
